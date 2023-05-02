@@ -1,0 +1,45 @@
+section{
+    background: rgb(97, 231, 255);
+    text-align: center;
+    border-radius: 20px;
+    width: 620px;
+    height: 600px;
+    margin: auto;
+    padding: 5px;
+}
+
+h1{
+    color: white;
+    text-shadow: 5px 5px 3px blue;
+}
+
+label#text_item{
+    color: black;
+    position: absolute;
+    left: 380px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input#box_item{
+    position: absolute;
+    top: 80px;
+    right: 440px;
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 12px black;
+}
+
+label#text_quantidade{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 380px;
+}
+
+input#box_quantidade_item{
+    position: absolute;
+    right: 385px;
+    width: 150px;
+    box-shadow: 5px 5px 12px black;
+    border-radius: 8px;
+}
