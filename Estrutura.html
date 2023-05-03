@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="icone_cesta_de_compras.ico" type="image/x-icon">
     <title>Compras</title>
+    <link rel="stylesheet" href="Design_Lista.css">
 </head>
 <body>
     <section>
         <h1>Lista de Compras</h1>
 
         <label id="text_item">Qual item deseja adicionar à sua lista? </label>
-        <br/>
+        
+        <br/> 
+
         <input type="text" id="box_item"/>
 
         <br/>
@@ -20,8 +23,24 @@
         <br/>
 
         <label id="text_quantidade">Informe a quantidade desejável do item acima: </label>
+        <br/>
         <input type="number" id="box_quantidade_item"/>
+
+        <br/>
+        
+        <br/>
+
+        <label id="text_preco_produto">Informe o preço de uma quantidade do produto: </label>
+        <input type="number" id="box_preco_produto"/>
+
+        <br/>
+        
+        <br/>
+
+        <button id="btn_coleta_dados">Enviar</button>
     </section>
+    
+    <script src="Interacao_Lista.js"></script>
 </body>
-    <link rel="stylesheet" href="Design_Lista.css">
+link:
 </html>

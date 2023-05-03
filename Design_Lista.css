@@ -39,7 +39,37 @@ label#text_quantidade{
 input#box_quantidade_item{
     position: absolute;
     right: 385px;
+    top: 138px;
     width: 150px;
     box-shadow: 5px 5px 12px black;
     border-radius: 8px;
+}
+
+label#text_preco_produto{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 380px;
+}
+
+input#box_preco_produto{
+    width: 150px;
+    position: absolute;
+    right: 385px;
+    top: 195px;
+    box-shadow: 5px 5px 12px black;
+    border-radius: 8px;
+}
+
+button#btn_coleta_dados{
+    color: black;
+    text-shadow: 2px 2px 1px blue;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    border-color: white;
+}
+   
+
+button#btn_coleta_dados:hover{
+    color: blue;
+    box-shadow: 5px 5px 5px black;
 }
