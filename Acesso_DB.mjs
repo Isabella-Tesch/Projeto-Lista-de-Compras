@@ -1,3 +1,8 @@
+import * as c from "./Interacao_Lista.js"
+//const parse = require('node-html-parser');
+
+
+
 const express = require("express")
 const app = express()
 const mysql = require("mysql")
@@ -12,7 +17,10 @@ const db = mysql.createConnection({
 db.connect(function(err){
     if (err) throw err;
     console.log("Connected")
+
 })
 
 app.use(express.json())
+
+app.use(cors())
 

@@ -11,3 +11,5 @@ btn_enviar.onclick = ()=> {
     }
     alert(input_preco_produto.length)
 }
+
+export {input_box_item, input_quantd_item, input_preco_produto};
