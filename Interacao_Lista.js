@@ -1,15 +1,26 @@
-//VALIDAÇÃO ENTRE O FRONT E O BACK
+document.addEventListener('DOMContentLoaded', function(){
+    var btn_dados = document.getElementById('btn_coleta_dados')
+    btn_dados.addEventListener('click', x)
 
-var btn_enviar = document.getElementById('btn_coleta_dados')
-
-btn_enviar.onclick = ()=> {
-    var input_box_item = document.getElementById('box_item').value
-    var input_quantd_item = document.getElementById('box_quantidade_item').value 
-    var input_preco_produto = document.getElementById('box_preco_produto').value
-    if (input_box_item.length > 0 && input_quantd_item.length > 0 && input_preco_produto.length > 0){
-        alert('oi kfgg')
+    function x(){
+        var input_box_item = document.getElementById('box_item').value
+    
+        fetch('http://localhost:3001/pegar_dados', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({box_item: input_box_item}) /* Converte o objeto javascript em uma string json. box_item corresponde à chave
+            do json resultante*/
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(error => {
+            console.log(error)
+        })
     }
-    alert(input_preco_produto.length)
-}
+})
 
-export {input_box_item, input_quantd_item, input_preco_produto};
+
