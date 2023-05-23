@@ -27,4 +27,54 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 })
 
+document.addEventListener('DOMContentLoaded', function(){
+    var Btn_Dados_Tabela = document.getElementById("Btn_Mostra_Dados_Tabela")
+    Btn_Dados_Tabela.addEventListener('click', PegarDadosDoServidor)
+
+    function PegarDadosDoServidor(){
+        fetch('http://localhost:3001/obter_dados', {
+            method: 'GET'
+        })
+        .then(response => response.json())
+        .then(resultado =>{
+            ExibirDadosTabela(resultado)
+        })
+        .catch(erro =>{
+            console.log(erro)
+        })
+    }
+
+    function ExibirDadosTabela(dados){
+        var corpo_da_tabela = document.querySelector('tbody')
+
+        //Limpa o Conteúdo da Tabela
+        corpo_da_tabela.innerHTML = ''
+
+        //Iteração dos dados recebidos e adiciona cada linha à tabela
+        dados.forEach(dado =>{
+            var linha = document.createElement('tr')
+
+            var Celula_Nome_Produto = document.createElement('td')
+            Celula_Nome_Produto.textContent = dado.nome_produto //O valor "nome_produto" é a propriedade da tabela do banco de dados.
+            linha.appendChild(Celula_Nome_Produto)
+            
+            var Celula_Quantd_Produto = document.createElement('td')
+            Celula_Quantd_Produto.textContent = dado.quantd_produto
+            linha.appendChild(Celula_Quantd_Produto)
+
+            var Celula_Preco_Produto = document.createElement('td')
+            Celula_Preco_Produto.textContent = dado.preco_produto
+            linha.appendChild(Celula_Preco_Produto)
+
+            var Celula_Total_Produto = document.createElement('td')
+            Celula_Total_Produto.textContent = dado.total_produto
+            linha.appendChild(Celula_Total_Produto)
+
+            corpo_da_tabela.appendChild(linha)          
+            
+        })
+
+    }
+})
+
 

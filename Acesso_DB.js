@@ -40,10 +40,21 @@ app.post('/pegar_dados', (req, res) => {
             else{
                 console.log('Dado inserido com sucesso!')
             }
-            db.end() // Fechamento da conexão com o banco de dados após a conclusão da consulta.
         })
     }
 
+})
+
+app.get('/obter_dados', (req,res) => {
+    var sql = 'SELECT * FROM compras_do_mercado';
+    db.query(sql, (erro, resultado)=>{
+        if (erro){
+            console.log('Houve um erro ao obter o dado: ', erro)
+        }
+        else{
+            res.json(resultado)
+        }
+    })
 })
 
 app.listen(3001, ()=>{
