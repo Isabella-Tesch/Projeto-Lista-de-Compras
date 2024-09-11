@@ -1,0 +1,27 @@
+{
+  "name": "projeto-isa",
+  "version": "1.0.0",
+  "description": "Aplicação de Lista de Compras utilizando Node.js e SQLite",
+  "main": "Acesso_DB.js",
+  "bin": "Acesso_DB.js",
+  "scripts": {
+    "start": "node Acesso_DB.js"
+  },
+  "author": "Isabella",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.0"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*",
+      "compras_do_mercado.db"
+    ],
+    "targets": [
+      "node16-win-x64"
+    ],
+    "output": "dist/projeto-isa"
+  }
+}
