@@ -1,0 +1,126 @@
+ section{
+    background: rgb(97, 231, 255);
+    text-align: center;
+    border-radius: 20px;
+    width: 620px;
+    height: 1000px;
+    margin: auto;
+    padding: 5px;
+}
+
+h1{
+    color: white;
+    text-shadow: 5px 5px 3px blue;
+}
+
+label#text_item{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+} 
+
+input#box_item{
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 12px black;
+} 
+
+label#text_quantidade{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+} 
+
+input#box_quantidade_item{
+    width: 150px;
+    box-shadow: 5px 5px 12px black;
+    border-radius: 8px;
+} 
+
+label#text_preco_produto{
+    font-family: 'Courier New', Courier, monospace;
+} 
+
+input#box_preco_produto{
+    width: 150px;
+    box-shadow: 5px 5px 12px black;
+    border-radius: 8px;
+} 
+
+button#btn_coleta_dados{
+    color: black;
+    text-shadow: 2px 2px 1px blue;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    border-color: white;
+}
+   
+
+button#btn_coleta_dados:hover{
+    color: blue;
+    box-shadow: 5px 5px 5px black;
+}
+
+.Traço_Tabela{
+    border-collapse: collapse;
+    margin: auto;
+    color: white;
+}
+
+.Traço_Tabela th, .Traço_Tabela td{
+    border: 1px solid black;
+    padding: 5px;
+    text-shadow: 5px 3px 2px black;
+}
+
+button#Btn_Mostra_Dados_Tabela{
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 1px blue;
+}
+
+button#Btn_Mostra_Dados_Tabela:hover{
+    color: blue;
+    box-shadow: 5px 5px 5px black;
+}
+
+footer#rodapé{
+    text-align: center;
+    color: white;
+}
+
+body{
+    background:rgb(0, 0, 0)
+} */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 620px;
+    margin: auto;
+    padding: 5px;
+}
+
+label, input {
+    margin: 10px 0;
+}
+
+input, button {
+    border-radius: 8px;
+    box-shadow: 5px 5px 12px black;
+}
+
+button {
+    border-color: white;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    label, input {
+        width: 100%;
+    }
+}
